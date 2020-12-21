@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap');
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: 'Lato';
+	line-height: 1.6;
+	color: #333;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: url('./bg-2.jpg') no-repeat center center/cover;
+}
+
+.container {
+	width: 90%;
+	max-width: 40rem;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
+	box-shadow: 0 0 1.5rem rgba(0,0,0, .15);
+}
+
+.quote-wrapper i {
+	font-size: 2rem;
+	margin-right: 2rem;
+}
+
+#quote {
+	font-size: 2.2rem;
+	font-weight: 500;
+	margin-bottom: 4rem;
+}
+
+#author {
+	font-size: 1.8rem;
+	margin-bottom: 2rem;
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.btn {
+	display: inline-block;
+	border: none;
+	outline: none;
+	border-radius: .5rem;
+	padding: 1rem 1.5rem;
+	color: white;
+	background: #333;
+	text-transform: capitalize;
+	cursor: pointer;
+	transition: -webkit-transform 250ms ease;
+	transition: transform 250ms ease;
+	transition: transform 250ms ease, -webkit-transform 250ms ease;
+}
+
+.btn:hover {
+	-webkit-transform: scale(1.1);
+	        transform: scale(1.1);
+}
+
+.loader {
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	border: 1.6rem solid #f3f3f3;
+	border-top: 1.6rem solid #333;
+	-webkit-animation: spinner 2s linear infinite;
+	        animation: spinner 2s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+	0% {
+		-webkit-transform: rotate(0);
+		        transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+}
+
+@keyframes spinner {
+	0% {
+		-webkit-transform: rotate(0);
+		        transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+}
+
+@media screen and (min-width: 600px) {
+	#quote {
+		font-size: 2.8rem;
+	}
+
+	#author {
+		font-size: 2.4rem;
+	}
+}
