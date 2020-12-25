@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="./favicon.png">
+	<link rel="stylesheet" href="style.css">
+	<script src="app.js" defer></script>
+	<title>Custom Countdown</title>
+</head>
+<body>
+	<video class="video" id="video" loop muted autoplay>
+		<source src="time.mp4"></source>
+	</video>
+	<div class="video-overlay"></div>
+	</div>
+	<section class="countdown" id='countdown'>
+		<div class="select-date" id="select-date">
+			<h1 class="large">Create a Custom Countdown</h1>
+			<form class="form" id='countdown-form'>
+				<div class="form-group">
+					<label for="input-title">Title</label>
+					<input type="text" id="input-title" placeholder="What are counting down to?">
+				</div>
+				<div class="form-group">
+					<label for="input-date">Select a Date</label>
+					<input type="date" id="input-date">
+				</div>
+				<button type="submit" class='btn submit-btn' id='submit-btn'>Submit</button>
+			</form>
+		</div>
+		<div class="counter hidden" id="counter">
+			<h2 class="large" id="counter-title"></h2>
+			<ul class="counter-list">
+				<li>
+					<span id="days"></span>
+					days
+				</li>
+				<li>
+					<span id="hours"></span>
+					hours
+				</li>
+				<li>
+					<span id="minutes"></span>
+					minutes
+				</li>
+				<li>
+					<span id="seconds"></span>
+					seconds
+				</li>
+			</ul>
+			<button class="btn reset-btn" id="reset-btn">new countdown</button>
+		</div>
+		<div class="complete hidden" id="complete">
+			<h3 class="complete-text">countdown complete</h3>
+			<h2 class="large" id="complete-message"></h2>
+			<button class="btn reset-btn" id="reset-btn">new countdown</button>
+		</div>
+	</section>
+</body>
+</html>
